@@ -6,5 +6,8 @@ __SHELL I/O__
 - 2-hellofile
 - 3-twifiles
 - 4-lastlines
+- 5-firstlines
+- 6-third_line
+- 7-file 
 ---
 
