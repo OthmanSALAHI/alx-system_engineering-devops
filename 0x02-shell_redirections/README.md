@@ -1,9 +1,7 @@
 ---
-__Advertisement :)__
+__SHELL I/O__
+---
+- 0-Hello_world
+- 1-confused_smiley
+---
 
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects!
