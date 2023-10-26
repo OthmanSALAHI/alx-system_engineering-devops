@@ -4,5 +4,5 @@
 i=10
 while ((i--))
 do
-  echo "best School"
+	echo "Best School"
 done
