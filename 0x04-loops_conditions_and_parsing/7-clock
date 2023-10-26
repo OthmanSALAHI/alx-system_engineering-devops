@@ -4,13 +4,14 @@
 h=0
 while((h <= 12))
 do
+  echo "Hour: $h"
   m=1
-  echo "Hour :$h"
   while((m <= 59))
   do
-    echo $m
+    echo "$m"
     ((m++))
   done
+
   ((h++))
 done
 
