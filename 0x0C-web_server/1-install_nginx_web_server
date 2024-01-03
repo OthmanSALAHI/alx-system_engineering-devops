@@ -7,7 +7,7 @@ sudo apt install nginx -y
 sudo ufw allow 'Nginx HTTP'
 
 # configure Nginx server to return a page that contains the string Hello World!
-echo "Hello World!" | sudo tee /var/www/html/index*
+sudo echo "Hello World!" > /var/www/html/index*
 # reload Nginx configs
 sudo service nginx reload
 
