@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # install NGINX server
-sudo apt update
-sudo apt install nginx -y
+apt-get update
+apt-get -y install nginx
 
 # configure Nginx to be listening on port 80
-sudo ufw allow 'Nginx HTTP'
+ufw allow 'Nginx HTTP'
 
 # configure Nginx server to return a page that contains the string Hello World!
-sudo echo "Hello World!" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
 # reload Nginx configs
-sudo service nginx reload
+service nginx reload
 
