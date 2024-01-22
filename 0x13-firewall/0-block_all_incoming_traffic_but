@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# security of server matter
+
+sudo apt-get update
+sudo apt-get install ufw -y
