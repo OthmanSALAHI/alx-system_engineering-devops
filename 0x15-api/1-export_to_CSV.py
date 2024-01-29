@@ -21,4 +21,6 @@ def main():
 
 
 if __name__ == "__main__":
+    if len(argv) != 2:
+        print("Usage: python3 1-export_to_CSV.py [user_id]")
     main()
