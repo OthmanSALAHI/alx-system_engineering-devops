@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """export to CSV"""
-from sys import argv
+from sys import argv, exit
 import csv
 import requests
+from os import path, remove
 
 
 def main():
@@ -11,16 +12,22 @@ def main():
     id_user = argv[1]
     user = requests.get(f'{BASE_URL}users/{id_user}').json()
     todos = requests.get(f'{BASE_URL}/users/{id_user}/todos').json()
-    with open(f'{id_user}.csv', 'w', newline='') as file:
-        writer = csv.writer(file, delimiter=',', quotechar='"',
-                            quoting=csv.QUOTE_ALL, lineterminator='\n')
+    filename = f"{id_user}.csv"
+    username = user.get("username")
+
+    if path.exists(filename):
+        remove(filename)
+
+    with open(filename, 'w') as file:
         for task in todos:
             if task.get('userId') == int(id_user):
-                writer.writerow([id_user, user.get('name'),
-                                task.get('completed'), task.get('title')])
+                done = task.get("completed")
+                title = task.get("title")
+            file.write(f'"{id_user}","{username}","{done}","{title}"\n')
 
 
 if __name__ == "__main__":
     if len(argv) != 2:
-        print("Usage: python3 1-export_to_CSV.py [user_id]")
+        print("Usage: ./1-export_to_CSV.py <id_user>")
+        exit(1)
     main()
