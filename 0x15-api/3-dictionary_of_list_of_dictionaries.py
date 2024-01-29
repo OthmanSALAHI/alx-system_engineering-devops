@@ -3,7 +3,6 @@
 
 from json import dump
 from os import path, remove
-from sys import exit
 from requests import get
 
 
