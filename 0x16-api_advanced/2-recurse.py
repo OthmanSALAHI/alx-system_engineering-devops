@@ -6,7 +6,7 @@ import requests
 
 def recurse(subreddit, after=None):
     """method doc"""
-    headers = {"User-Agent": "MyCustomUserAgent/1.0"}
+    headers = {"User-Agent": "MyBot/1.0"}
     params = {"after": after}
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     response = requests.get(url, allow_redirects=False,
