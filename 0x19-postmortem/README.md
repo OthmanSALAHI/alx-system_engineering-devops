@@ -1,6 +1,6 @@
 # POSTMORTEM ABOUT ISSUE IN MY APACHE2:
 
-<![](https://i.pinimg.com/originals/26/8c/3f/268c3f0f74e4db0ee66cc875ad55d4fc.gif) 
+![](https://i.pinimg.com/originals/26/8c/3f/268c3f0f74e4db0ee66cc875ad55d4fc.gif) 
 
 ## Issue Summary:
 
